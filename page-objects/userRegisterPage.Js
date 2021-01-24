@@ -9,10 +9,9 @@ module.exports = {
         genderOption: by.id('id_gender2'),
         firstName: by.id('customer_firstname'),
         lastName: by.id('customer_lastname'),
+        password: by.id('passwd'),
         // FALTA FECHA DE CUMPLEAÑOS
         company: by.id('Company'),
-        addressOne: by.id('address1'),
-        addressTwo: by.id('address2'),
         city: by.id('city'),
         PostalCode: by.id('postcode'),
 
@@ -20,9 +19,6 @@ module.exports = {
         phoneMobile: by.id('phone_mobile'),
 
         countRegister: by.class('account')
-
-
-
 
     },
 
@@ -52,6 +48,10 @@ module.exports = {
     },
     writeLastName : function () {
         var selector = page.userRegister.elements.lastName;
+        return driver.findElement(selector).sendKeys(searchQuery, selenium.sendKeys);
+    },
+    writepassword: function () {
+        var selector = page.userRegister.elements.password;
         return driver.findElement(selector).sendKeys(searchQuery, selenium.sendKeys);
     },
     writeNameCompay : function () {

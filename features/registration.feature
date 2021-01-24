@@ -5,7 +5,7 @@ Feature: App Registration
   We want to be able to let them register and login
   
   #@Login
-  Scenario: Go to login page
-    When I go to login
-    Then I see the Title of the login page
+  #Scenario: Go to login page
+    #When I go to login
+    #Then I see the Title of the login page
 
